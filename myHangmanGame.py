@@ -2,13 +2,6 @@ import os
 from random_words import RandomWords
 
 terminalSize = os.get_terminal_size().columns
-# rules = ["Welcome to Hangman, Enter at your peril!",
-#         "To play, one player must select a word to guess.",
-#         "The other player must try to guess the word.",
-#         "However, beware, you only have 6 lives!",
-#         "If you reach 0 lives you DIE!",
-#         "ENJOY!!!"]
-
 rules = ["Welcome to Hangman, Enter at your peril!",
          "You man have up to two players.",
          "To play, one player must select a word to guess.",
@@ -29,13 +22,15 @@ while playAgain:
         word = rw.random_word()
     else:
         word = str(input("Please pick a word: ")).lower()
-    os.system('clear')
+         os.system('clear')
+         
     playerGuess = None
     lettersGuessed = []
     guessedWord = []
     for i in word:
         guessedWord.append("_ ")
     guesses = None
+         
     print("You have 6 lives! GO!!")
     remainingLives = 5
 
